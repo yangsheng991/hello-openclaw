@@ -1,6 +1,6 @@
 # Hello OpenClaw 🤖
 
-My first OpenClaw project - learning Node.js, Git, GitHub, and CI/CD!
+My first OpenClaw project - learning Node.js, Git, GitHub, CI/CD, and **Gateway/RPC**!
 
 ## 🎯 Project Goals
 
@@ -8,6 +8,8 @@ My first OpenClaw project - learning Node.js, Git, GitHub, and CI/CD!
 - ✅ Practice Git version control
 - ✅ Understand GitHub integration
 - ✅ Build CI/CD pipeline with GitHub Actions
+- ✅ **NEW: Master Gateway & RPC communication**
+- ✅ **NEW: Terminal-based gateway testing**
 
 ## 🚀 Quick Start
 
@@ -22,6 +24,22 @@ npm start
 npm test
 ```
 
+## 🔍 Gateway Testing (NEW!)
+
+```bash
+# Quick gateway check
+npm run gateway:quick
+
+# Full health check
+npm run gateway:health
+
+# RPC connection test
+npm run gateway:rpc
+
+# Complete test suite (Gateway + App)
+npm run gateway:test
+```
+
 ## 📁 Project Structure
 
 ```
@@ -30,48 +48,50 @@ hello-openclaw/
 │   └── workflows/
 │       └── ci.yml         # CI/CD pipeline
 ├── src/
-│   └── index.js           # Main application
+│   ├── index.js           # Main application
+│   └── gateway/           # Gateway testing tools
+│       ├── health-check.js
+│       └── rpc-test.js
 ├── tests/
 │   └── index.test.js      # Test suite
-├── .gitignore             # Git ignore rules
-├── package.json           # Node.js configuration
-└── README.md              # This file
+├── scripts/
+│   └── gateway/           # Terminal scripts
+│       ├── test-all.sh
+│       └── quick-check.sh
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
 ## 🔄 CI/CD Flow
 
-```mermaid
-graph LR
-    A[Write Code] --> B[git commit]
-    B --> C[git push]
-    C --> D[GitHub Actions]
-    D --> E[Run Tests]
-    E --> F{Pass?}
-    F -->|Yes| G[✅ Success]
-    F -->|No| H[❌ Fix & Retry]
+```
+Write Code → git commit → git push → GitHub Actions → Auto-test
 ```
 
 ## 📚 What I Learned
 
 ### Technical Skills
-- [ ] Node.js project setup
-- [ ] Git commands (commit, push, pull)
-- [ ] GitHub repository management
-- [ ] GitHub Actions workflow
-- [ ] Writing tests
+- [x] Node.js project setup
+- [x] Git commands (commit, push, pull)
+- [x] GitHub repository management
+- [x] GitHub Actions workflow
+- [x] Writing tests
+- [x] Gateway health checking
+- [x] RPC connection testing
 
 ### English Skills
-- [ ] Read technical documentation
-- [ ] Write commit messages
-- [ ] Understand CI/CD logs
-- [ ] Discuss code in English
+- [x] Read technical documentation
+- [x] Write commit messages
+- [x] Understand CI/CD logs
+- [x] Discuss code in English
 
 ## 🎓 Next Steps
 
 After completing this project:
-1. Add more features to the app
-2. Learn about branches and pull requests
-3. Add deployment to the CI/CD pipeline
+1. ✅ Gateway & RPC mastery (in progress)
+2. Add more features to the app
+3. Learn about branches and pull requests
 4. Move to Project 2: Quick Notes Agent
 
 ## 👤 Author

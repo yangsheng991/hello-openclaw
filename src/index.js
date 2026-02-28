@@ -16,7 +16,7 @@ function sayHello(name = 'World') {
     console.log(message);
     return message;
 }
-
+                                                                                                  
 // Get current timestamp
 function getTimestamp() {
     return new Date().toISOString();

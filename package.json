@@ -1,16 +1,22 @@
 {
   "name": "hello-openclaw",
   "version": "1.0.0",
-  "description": "My first OpenClaw project - Hello World with CI/CD",
+  "description": "My first OpenClaw project - Hello World with CI/CD and Gateway testing",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node tests/index.test.js"
+    "test": "node tests/index.test.js",
+    "gateway:health": "node src/gateway/health-check.js",
+    "gateway:rpc": "node src/gateway/rpc-test.js",
+    "gateway:test": "bash scripts/gateway/test-all.sh",
+    "gateway:quick": "bash scripts/gateway/quick-check.sh"
   },
   "keywords": [
     "openclaw",
     "hello-world",
-    "learning"
+    "learning",
+    "gateway",
+    "rpc"
   ],
   "author": "yangsheng991",
   "license": "MIT",
