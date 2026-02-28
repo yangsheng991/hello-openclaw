@@ -27,20 +27,12 @@ jobs:
       
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci || npm install
       
       # Step 4: Run tests
       - name: Run tests
         run: npm test
       
-      # Step 5: Verify build (optional for now)
+      # Step 5: Verify application runs
       - name: Verify application runs
         run: node src/index.js
-
-  # Optional: Add deployment job later
-  # deploy:
-  #   needs: test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Deploy
-  #       run: echo "Deploy to production"
