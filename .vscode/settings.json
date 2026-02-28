@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "prettier.singleQuote": true,
+  "eslint.enable": true,
+  "terminal.integrated.defaultProfile.linux": "bash"
+}
